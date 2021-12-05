@@ -7,6 +7,7 @@ import com.sparta.data.GenerateArrayList;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Test<E> {
@@ -19,13 +20,15 @@ public class Test<E> {
         BinaryTreeSort bts = new BinaryTreeSort();
 
 
-//      GENERIC ARRAYS SORT
+////      GENERIC ARRAYS SORT
 //        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+//        Comparable[] n = {5, 4, 3, 2, 1};
 //
-//        System.out.println("Unsorted;" + Arrays.toString(cars));
-//        System.out.println("B Sort" + Arrays.toString(b.sort(cars)));
-//        System.out.println("Q Sort" +Arrays.toString(q.sort(cars)));
 //
+////        System.out.println("Unsorted;" + Arrays.toString(cars));
+//        System.out.println("B Sort" + Arrays.toString(b.sort(n)));
+//        System.out.println("Q Sort" +Arrays.toString(q.sort(n)));
+
 //
 //
 //
@@ -57,12 +60,23 @@ public class Test<E> {
 //        System.out.println("B Sort" + b.sort(arls1));
 //        System.out.println("Q Sort: " + q.sort(arls1));
 
-        int[] t1 = ar.staticarrayA();
-        System.out.println(Arrays.toString(t1));
-        bts.treeins(t1);
-        bts.inorderRec(bts.getRoot());
-        System.out.println(Arrays.toString(bts.getArraysorted()));
+//        Comparable[] t1 = ar.staticarrayA();
+//        Comparable[] t1 = {5, 4, 3, 2, 1};
+//        System.out.println(Arrays.toString(t1));
+//        bts.sort(t1);
+//        bts.inorderRecA(bts.getRoot());
+//        System.out.println(Arrays.toString(bts.getArraysorted()));
 
+        List<String> t2  = new ArrayList<String>();
+        t2.add("z");
+        t2.add("y");
+        t2.add("x");
+        t2.add("w");
+        t2.add("v");
+        System.out.println(t2);
+        bts.sort(t2);
+        bts.inorderRecL(bts.getRoot());
+        System.out.println(bts.getListsorted());
 
 
     }
