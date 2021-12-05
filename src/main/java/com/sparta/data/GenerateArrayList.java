@@ -9,7 +9,7 @@ public class GenerateArrayList {
     public ArrayList<Integer> generate(int size) {
         alistAS = new ArrayList<>();
         for (int i = 0; i < size; i++) {  // Random generation of numbers
-            alistAS.add(new java.util.Random().nextInt(0, 10000));
+            alistAS.add(new java.util.Random().nextInt(0, 100000));
         }
         setalistAS(alistAS);
         return alistAS;

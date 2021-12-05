@@ -1,3 +1,5 @@
+package Bin;
+
 import com.sparta.algorithms.BinaryTreeSort;
 import com.sparta.algorithms.BubbleSort;
 import com.sparta.algorithms.QuickSort;
@@ -19,10 +21,10 @@ public class Test<E> {
         QuickSort q = new QuickSort();
         BinaryTreeSort bts = new BinaryTreeSort();
 //        Comparable[] n = {5, 4, 3, 2, 1, 9, 8, 7, 6, 5};
-        Comparable[] n = ar.generateC(10000);
-
-//        System.out.println(Arrays.toString(q.sort(ar.generate(10))));
-        System.out.println(Arrays.toString(q.sort(n)));
+//        Comparable[] n = ar.generateC(10000);
+//
+////        System.out.println(Arrays.toString(q.sort(ar.generate(10))));
+//        System.out.println(Arrays.toString(q.sort(n)));
 
 
 //      GENERIC ARRAYS SORT
@@ -68,23 +70,27 @@ public class Test<E> {
 //
 //        System.out.println("B Sort" + b.sort(arls1));
 //        System.out.println("Q Sort: " + q.sort(arls1));
-//
-//        Comparable[] t2 = ar.staticarrayA();
+
+//        Comparable[] t2 = ar.generate(10000);
 //        Comparable[] t1 = {5, 4, 3, 2, 1};
-//        System.out.println(Arrays.toString(t1));
-//        bts.sort(t1);
+//        Comparable[] t3 = {"e", "d", "c", "b", "a"};
+//        System.out.println(Arrays.toString(t2));
+//        bts.sort(t2);
 //        bts.inorderRecA(bts.getRoot());
 //        System.out.println(Arrays.toString(bts.getArraysorted()));
-//
-//        List<String> t2  = new ArrayList<String>();
-//        t2.add("z");
-//        t2.add("y");
-//        t2.add("x");
-//        t2.add("w");
-//        t2.add("v");
-//        System.out.println(t2);
-//        bts.sort(t2);
-//        bts.inorderRecL(bts.getRoot());
+
+        List<String> t2  = new ArrayList<String>();
+        List<Character> t3  = arl.generateC(13);
+
+        t2.add("z");
+        t2.add("y");
+        t2.add("x");
+        t2.add("w");
+        t2.add("v");
+        System.out.println(t3);
+        bts.sort(t3);
+        System.out.print("Binary Tree  Sort Complete: ");
+        bts.inorderRecL(bts.getRoot());
 //        System.out.println(bts.getListsorted());
 
         // cannot run BTS list and array back to back

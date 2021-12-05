@@ -1,4 +1,4 @@
-package com.sparta;
+package com.sparta.stopwatch;
 
 public class Stopwatch {
     public double calculatetime(double starttime){

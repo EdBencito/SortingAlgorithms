@@ -1,6 +1,6 @@
 package com.sparta.algorithms;
 
-import com.sparta.Stopwatch;
+import com.sparta.stopwatch.Stopwatch;
 
 import java.util.List;
 

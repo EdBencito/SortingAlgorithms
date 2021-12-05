@@ -1,5 +1,6 @@
 package com.sparta.cli;
 
+import com.sparta.algorithms.BinaryTreeSort;
 import com.sparta.algorithms.BubbleSort;
 import com.sparta.algorithms.QuickSort;
 import com.sparta.data.GenerateArray;
@@ -19,6 +20,7 @@ public class Cli {
 
     BubbleSort b = new BubbleSort();
     QuickSort q = new QuickSort();
+    BinaryTreeSort bts = new BinaryTreeSort();
     GenerateArray ar = new GenerateArray();
     GenerateArrayList arl = new GenerateArrayList();
 
@@ -137,6 +139,30 @@ public class Cli {
         } else if (algo == 2 && datastructure == 2 && datatype == 2) {
             System.out.println("Quick Sort on Array List with Randomly Generated Characters Selected" + "\n");
             System.out.println("Quick Sort Complete:" + Arrays.toString(q.sort(ar.generateC(10000))));
+        } else if (algo == 3 && datastructure == 1 && datatype == 1) {
+            System.out.println("Binary Tree  Sort on Array with Randomly Generated Integers Selected" + "\n");
+            bts.sort(ar.generate(10000));
+            System.out.print("Binary Tree  Sort Complete: ");
+            bts.inorderRecA(bts.getRoot());
+//            System.out.println("Binary Tree  Sort Complete:" + Arrays.toString(bts.getArraysorted()));
+        } else if (algo == 3 && datastructure == 1 && datatype == 2) {
+            System.out.println("Binary Tree  Sort on Array with Randomly Generated Characters Selected" + "\n");
+            bts.sort(ar.generateC(13));
+            System.out.print("Binary Tree  Sort Complete: ");
+            bts.inorderRecA(bts.getRoot());
+//            System.out.println("Binary Tree  Sort Complete:" + Arrays.toString(bts.getArraysorted()));
+        } else if (algo == 3 && datastructure == 2 && datatype == 1) {
+            System.out.println("Binary Tree  Sort on Array List with Randomly Generated Integers Selected" + "\n");
+            bts.sort(arl.generate(10000));
+            System.out.print("Binary Tree  Sort Complete: ");
+            bts.inorderRecL(bts.getRoot());
+//            System.out.println("Binary Tree  Sort Complete:" + (bts.getListsorted()));
+        } else if (algo == 3 && datastructure == 2 && datatype == 2) {
+            System.out.println("Binary Tree  Sort on Array List with Randomly Generated Characters Selected" + "\n");
+            bts.sort(arl.generateC(13));
+            System.out.print("Binary Tree  Sort Complete: ");
+            bts.inorderRecL(bts.getRoot());
+//            System.out.println("Binary Tree  Sort Complete:" + bts.getListsorted());
         }
     }
 
