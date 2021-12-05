@@ -1,18 +1,18 @@
 package com.sparta.algorithms;
 
+import com.sparta.Stopwatch;
+
 import java.util.List;
 
 //public class QuickSort implements Sortable {
 public class QuickSort<T extends Comparable<? super T>> implements Sortable <T> {
-
+    Stopwatch stopwatch = new Stopwatch();
     @Override
     public T[] sort(T[] a) {
         double time = System.nanoTime();
         sortA(a, 0, a.length - 1);
         System.out.print("Quick Sort Completed in: ");
-        time = System.nanoTime() - time;
-        time = time / 1000000;
-        System.out.print(Double.toString(time).substring(0, Double.toString(time).length() - 3));
+        stopwatch.calculatetime(time);
         System.out.print(" Milliseconds \n");
         return a;
     }
@@ -40,7 +40,7 @@ public class QuickSort<T extends Comparable<? super T>> implements Sortable <T> 
         while (true) {
             do {
                 l++;
-            } while (arraySorted[l].compareTo(pivot)<=0);
+            } while (arraySorted[l].compareTo(pivot)<0);
             do {
                 r--;
             } while (arraySorted[r].compareTo(pivot) > 0);
@@ -60,9 +60,7 @@ public class QuickSort<T extends Comparable<? super T>> implements Sortable <T> 
         double time = System.nanoTime();
         sortA(a, 0, (a.size() - 1));
         System.out.print("Quick Sort Completed in: ");
-        time = System.nanoTime() - time;
-        time = time / 1000000;
-        System.out.print(Double.toString(time).substring(0, Double.toString(time).length() - 3));
+        stopwatch.calculatetime(time);
         System.out.print(" Milliseconds \n");
         return a;
     }
@@ -92,7 +90,7 @@ public class QuickSort<T extends Comparable<? super T>> implements Sortable <T> 
         while (true) {
             do {
                 l++;
-            } while (listSorted.get(l).compareTo(pivot) <= 0);
+            } while (listSorted.get(l).compareTo(pivot) < 0);
             do {
                 r--;
             } while (listSorted.get(r).compareTo(pivot) > 0);

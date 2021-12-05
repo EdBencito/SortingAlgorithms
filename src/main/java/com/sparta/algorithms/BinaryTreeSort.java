@@ -1,8 +1,12 @@
 package com.sparta.algorithms;
 
+import com.sparta.Stopwatch;
+
 import java.util.List;
 
 public class BinaryTreeSort<T extends Comparable<? super T>> implements Sortable<T> {
+    Stopwatch stopwatch = new Stopwatch();
+
     //  Nested Class with left and right child of current node and value in index
     public class Node {
         T key;
@@ -38,7 +42,7 @@ public class BinaryTreeSort<T extends Comparable<? super T>> implements Sortable
             root = new Node(key);
             return root;
         }
-        if (key.compareTo(root.key) <= 0)
+        if (key.compareTo(root.key) < 0)
             root.left = insertRec(root.left, key);
         else if (key.compareTo(root.key) > 0)
             root.right = insertRec(root.right, key);
@@ -47,6 +51,7 @@ public class BinaryTreeSort<T extends Comparable<? super T>> implements Sortable
 
     private int j = 0;
     private T[] arraysorted;
+    private double time;
 
     public T[] getArraysorted() {
         return arraysorted;
@@ -65,10 +70,14 @@ public class BinaryTreeSort<T extends Comparable<? super T>> implements Sortable
             inorderRecA(root.right);
         }
         setArraysorted(arraysorted);
+        System.out.print("Quick Sort Completed in: ");
+        stopwatch.calculatetime(time);
+        System.out.print(" Milliseconds \n");
     }
 
     @Override
     public T[] sort(T[] a) {
+        time = System.nanoTime();
         arraysorted = a;
         for (int i = 0; i < a.length; i++) {
             insert(a[i]);
@@ -78,6 +87,11 @@ public class BinaryTreeSort<T extends Comparable<? super T>> implements Sortable
 
 
 
+
+
+
+//  TREE SORT FOR LISTS
+
     public void inorderRecL(Node root) {
         if (root != null) {
             inorderRecL(root.left);
@@ -86,12 +100,16 @@ public class BinaryTreeSort<T extends Comparable<? super T>> implements Sortable
             j++;
             inorderRecL(root.right);
         }
-        setArraysorted(arraysorted);
+        setListsorted(listsorted);
+        System.out.print("Quick Sort Completed in: ");
+        stopwatch.calculatetime(time);
+        System.out.print(" Milliseconds \n");
     }
 
 
     @Override
     public List<T> sort(List<T> a) {
+        time = System.nanoTime();
         listsorted = a;
         for (int i = 0; i < a.size(); i++) {
             insert(a.get(i));
@@ -106,10 +124,9 @@ public class BinaryTreeSort<T extends Comparable<? super T>> implements Sortable
         return listsorted;
     }
 
-    public void setArraysorted(List<T> listsorted) {
+    public void setListsorted(List<T> listsorted) {
         this.listsorted = listsorted;
     }
-
 
 
 }

@@ -18,21 +18,30 @@ public class Test<E> {
         BubbleSort b = new BubbleSort();
         QuickSort q = new QuickSort();
         BinaryTreeSort bts = new BinaryTreeSort();
+//        Comparable[] n = {5, 4, 3, 2, 1, 9, 8, 7, 6, 5};
+        Comparable[] n = ar.generateC(10000);
+
+//        System.out.println(Arrays.toString(q.sort(ar.generate(10))));
+        System.out.println(Arrays.toString(q.sort(n)));
 
 
-////      GENERIC ARRAYS SORT
+//      GENERIC ARRAYS SORT
 //        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 //        Comparable[] n = {5, 4, 3, 2, 1};
 //
 //
-////        System.out.println("Unsorted;" + Arrays.toString(cars));
+//        System.out.println("Unsorted;" + Arrays.toString(cars));
+//        System.out.println("B Sort" + Arrays.toString(b.sort(cars)));
+////        System.out.println("Q Sort" +Arrays.toString(q.sort(cars)));
+//
+//        System.out.println("Unsorted;" + Arrays.toString(n));
 //        System.out.println("B Sort" + Arrays.toString(b.sort(n)));
-//        System.out.println("Q Sort" +Arrays.toString(q.sort(n)));
-
+////        System.out.println("Q Sort" +Arrays.toString(q.sort(n)));
 //
 //
-//
-////      ARRAYLIST TEST RANDOM GENERATE;
+////
+////
+//////      ARRAYLIST TEST RANDOM GENERATE;
 //        System.out.println(arl.staticarraylist(5));
 //        List<Integer> a = arl.staticarraylist(5);
 //        System.out.println(arl.generate(5));
@@ -59,24 +68,26 @@ public class Test<E> {
 //
 //        System.out.println("B Sort" + b.sort(arls1));
 //        System.out.println("Q Sort: " + q.sort(arls1));
-
-//        Comparable[] t1 = ar.staticarrayA();
+//
+//        Comparable[] t2 = ar.staticarrayA();
 //        Comparable[] t1 = {5, 4, 3, 2, 1};
 //        System.out.println(Arrays.toString(t1));
 //        bts.sort(t1);
 //        bts.inorderRecA(bts.getRoot());
 //        System.out.println(Arrays.toString(bts.getArraysorted()));
+//
+//        List<String> t2  = new ArrayList<String>();
+//        t2.add("z");
+//        t2.add("y");
+//        t2.add("x");
+//        t2.add("w");
+//        t2.add("v");
+//        System.out.println(t2);
+//        bts.sort(t2);
+//        bts.inorderRecL(bts.getRoot());
+//        System.out.println(bts.getListsorted());
 
-        List<String> t2  = new ArrayList<String>();
-        t2.add("z");
-        t2.add("y");
-        t2.add("x");
-        t2.add("w");
-        t2.add("v");
-        System.out.println(t2);
-        bts.sort(t2);
-        bts.inorderRecL(bts.getRoot());
-        System.out.println(bts.getListsorted());
+        // cannot run BTS list and array back to back
 
 
     }

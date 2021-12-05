@@ -1,10 +1,12 @@
 package com.sparta.algorithms;
 
+import com.sparta.Stopwatch;
+
 import java.util.List;
 
 //public class BubbleSort implements Sortable {
 public class BubbleSort<T extends Comparable<? super T>> implements Sortable<T> {
-
+    Stopwatch stopwatch = new Stopwatch();
     @Override
     public T[] sort(T[] a) {
         double time = System.nanoTime();
@@ -22,17 +24,13 @@ public class BubbleSort<T extends Comparable<? super T>> implements Sortable<T> 
                     }
                 } catch (IndexOutOfBoundsException e) {
                     System.out.print("Bubble Sort Completed in: ");
-                    time = System.nanoTime() - time;
-                    time = time / 1000000;
-                    System.out.print(Double.toString(time).substring(0, Double.toString(time).length() - 3));
+                    stopwatch.calculatetime(time);
                     System.out.print(" Milliseconds \n");
                     e.printStackTrace();
                 }
         }
         System.out.print("Bubble Sort Completed in: ");
-        time = System.nanoTime() - time;
-        time = time / 1000000;
-        System.out.print(Double.toString(time).substring(0, Double.toString(time).length() - 3));
+        stopwatch.calculatetime(time);
         System.out.print(" Milliseconds \n");
         return arraySorted;
     }
@@ -54,17 +52,13 @@ public class BubbleSort<T extends Comparable<? super T>> implements Sortable<T> 
                     }
                 } catch (IndexOutOfBoundsException e) {
                     System.out.print("Bubble Sort Completed in: ");
-                    time = System.nanoTime() - time;
-                    time = time / 1000000;
-                    System.out.print(Double.toString(time).substring(0, Double.toString(time).length() - 3));
+                    stopwatch.calculatetime(time);
                     System.out.print(" Milliseconds \n");
                     e.printStackTrace();
                 }
         }
         System.out.print("Bubble Sort Completed in: ");
-        time = System.nanoTime() - time;
-        time = time / 1000000;
-        System.out.print(Double.toString(time).substring(0, Double.toString(time).length() - 3));
+        stopwatch.calculatetime(time);
         System.out.print(" Milliseconds \n");
         return listSorted;
     }
