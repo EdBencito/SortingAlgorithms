@@ -53,6 +53,7 @@ public class BinaryTreeSort<T extends Comparable<? super T>> implements Sortable
     private int j = 0;
     private T[] arraysorted;
     private double time;
+    private String output;
 
     public T[] getArraysorted() {
         return arraysorted;

@@ -20,11 +20,13 @@ public class Test<E> {
         BubbleSort b = new BubbleSort();
         QuickSort q = new QuickSort();
         BinaryTreeSort bts = new BinaryTreeSort();
+
+
 //        Comparable[] n = {5, 4, 3, 2, 1, 9, 8, 7, 6, 5};
-//        Comparable[] n = ar.generateC(10000);
+////        Comparable[] n = ar.generateC(10000);
 //
 ////        System.out.println(Arrays.toString(q.sort(ar.generate(10))));
-//        System.out.println(Arrays.toString(q.sort(n)));
+//        System.out.println(Arrays.toString(b.sort(n)));
 
 
 //      GENERIC ARRAYS SORT
@@ -75,6 +77,7 @@ public class Test<E> {
 //        Comparable[] t1 = {5, 4, 3, 2, 1};
 //        Comparable[] t3 = {"e", "d", "c", "b", "a"};
 //        System.out.println(Arrays.toString(t2));
+//
 //        bts.sort(t2);
 //        bts.inorderRecA(bts.getRoot());
 //        System.out.println(Arrays.toString(bts.getArraysorted()));
