@@ -56,7 +56,7 @@ public class QuickSort<T extends Comparable<? super T>> implements Sortable <T> 
     }
 
     @Override
-    public List sort(List a) {
+    public List<T> sort(List<T> a) {
         double time = System.nanoTime();
         sortA(a, 0, (a.size() - 1));
         System.out.print("Quick Sort Completed in: ");
@@ -67,9 +67,9 @@ public class QuickSort<T extends Comparable<? super T>> implements Sortable <T> 
         return a;
     }
 
-    public List<Integer> sortA(List<Integer> a, int lo, int hi) {
+    public List<T> sortA(List<T> a, int lo, int hi) {
 
-        List<Integer> listSorted = a;
+        List<T> listSorted = a;
 
         if (lo >= 0 && hi >= 0 && lo < hi) {
 
@@ -80,21 +80,22 @@ public class QuickSort<T extends Comparable<? super T>> implements Sortable <T> 
         return listSorted;
     }
 
-    public int partition(List<Integer> a, int lo, int hi) {
-        int i = 0;
+    public int partition(List<T> a, int lo, int hi) {
+        T i;
 
-        List<Integer> listSorted = a;
-        int pivot = a.get((int) Math.floor((hi + lo) / 2)); // Partition
+        List<T> listSorted = a;
+//        int pivot = a.get((int) Math.floor((hi + lo) / 2)); // Partition
+        T pivot = a.get((int) Math.floor((hi + lo) / 2)); // Partition
         int l = lo - 1; // Left Index
         int r = hi + 1; // Right Index
 
         while (true) {
             do {
                 l++;
-            } while (listSorted.get(l) < pivot);
+            } while (listSorted.get(l).compareTo(pivot) <= 0);
             do {
                 r--;
-            } while (listSorted.get(r) > pivot);
+            } while (listSorted.get(r).compareTo(pivot) > 0);
 
             if (l >= r) {
                 return r;

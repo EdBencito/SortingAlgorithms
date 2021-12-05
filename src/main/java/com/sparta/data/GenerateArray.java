@@ -1,10 +1,10 @@
 package com.sparta.data;
 
 public class GenerateArray {
-    private int arrayAS[];
+    private Comparable[] arrayAS;
 
-    public int[] generate(int size) {
-        int arrayA[] = new int[size];
+    public Comparable[] generate(int size) {
+        Comparable arrayA[] = new Comparable[size];
         for (int i = 0; i < size; i++) {  // Random generation of numbers
             arrayA[i] = new java.util.Random().nextInt(0, 100000);
         }
@@ -22,11 +22,11 @@ public class GenerateArray {
         return y;
     }
 
-    public int[] getArrayAS() {
+    public Comparable[] getArrayAS() {
         return arrayAS;
     }
 
-    public void setArrayAS(int[] arrayAS) {
+    public void setArrayAS(Comparable[] arrayAS) {
         this.arrayAS = arrayAS;
     }
 }
