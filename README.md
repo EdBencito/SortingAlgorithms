@@ -6,19 +6,19 @@ This project is an array & array list sorting program. the program features 3 di
 
 * Execute the program from the "Main" Class, upon executing the console will print out the menu as shown the image below, any key insert will register in the line below the printed menu press Enter to confirm option selection and a message will be printed confirming your selection.
 
-  ![image-20211206015917142](C:\Users\ESRBe\AppData\Roaming\Typora\typora-user-images\image-20211206015917142.png)
+  ![image-20211206015917142](README\image-20211206015917142.png)
 
 * The following menu will be printed and a selection will need to be made before moving on
 
-![image-20211206021424602](C:\Users\ESRBe\AppData\Roaming\Typora\typora-user-images\image-20211206021424602.png)
+![image-20211206021424602](README\image-20211206021424602.png)
 
 * After a selection has been made this menu will be printed another selection will need to be made.
 
-![image-20211206023008997](C:\Users\ESRBe\AppData\Roaming\Typora\typora-user-images\image-20211206023008997.png)
+![image-20211206023008997](README\image-20211206023008997.png)
 
-* once all selections have been confirmed a message confirming all selections made along with the data structure and data type sorted by the algorithm will be sorted and printed in the lines below 
+* once all selections have been confirmed a message confirming all selections made along with the data structure and data type sorted by the  will be sorted and printed in the lines below 
 
-![image-20211206025047262](C:\Users\ESRBe\AppData\Roaming\Typora\typora-user-images\image-20211206025047262.png)
+![](README\image-20211206025047262.png)
 
 # Known issues
 
