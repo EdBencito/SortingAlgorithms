@@ -5,11 +5,7 @@ import com.sparta.algorithms.BubbleSort;
 import com.sparta.algorithms.QuickSort;
 import com.sparta.data.GenerateArray;
 import com.sparta.data.GenerateArrayList;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class Test<E> {

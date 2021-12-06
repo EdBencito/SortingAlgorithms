@@ -3,3 +3,5 @@ FILE [INFO ] 2021-12-05 18:22:54,787 main My Sparta App - this is an info functi
 FILE [ERROR] 2021-12-05 18:22:54,790 main My Sparta App - This is an error function
 FILE [INFO ] 2021-12-05 18:38:18,249 main My Sparta App - this is an info function
 FILE [ERROR] 2021-12-05 18:38:18,252 main My Sparta App - This is an error function
+FILE [ERROR] 2021-12-06 02:48:28,096 main Sorting Algorithms - java.lang.NumberFormatException: For input string: ""
+FILE [ERROR] 2021-12-06 02:48:28,104 main Sorting Algorithms - Exception Thrown
