@@ -6,19 +6,19 @@ This project is an array & array list sorting program. the program features 3 di
 
 * Execute the program from the "Main" Class, upon executing the console will print out the menu as shown the image below, any key insert will register in the line below the printed menu press Enter to confirm option selection and a message will be printed confirming your selection.
 
-  ![image-20211206015917142](README\image-20211206015917142.png?raw=true)
+  ![image-20211206015917142](README/image-20211206015917142.png?raw=true)
 
 * The following menu will be printed and a selection will need to be made before moving on
 
-![image-20211206021424602](README\image-20211206021424602.png?raw=true)
+![image-20211206021424602](README/image-20211206021424602.png?raw=true)
 
 * After a selection has been made this menu will be printed another selection will need to be made.
 
-![image-20211206023008997](README\image-20211206023008997.png?raw=true)
+![image-20211206023008997](README/image-20211206023008997.png?raw=true)
 
 * once all selections have been confirmed a message confirming all selections made along with the data structure and data type sorted by the  will be sorted and printed in the lines below 
 
-![](README\image-20211206025047262.png?raw=true)
+![](README/image-20211206025047262.png?raw=true)
 
 # Known issues
 
